@@ -1,0 +1,15 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: mis-feign-test
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8762/eureka}
