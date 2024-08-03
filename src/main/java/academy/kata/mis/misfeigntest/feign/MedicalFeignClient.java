@@ -19,7 +19,7 @@ public interface MedicalFeignClient {
 
 
     @Component
-    class MedicalServiceFallbackFactory implements FallbackFactory<FallbackWithFactory> {
+    class MedicalServiceFallbackFactory implements FallbackFactory<MedicalFeignClient> {
 
         @Override
         public FallbackWithFactory create(Throwable cause) {

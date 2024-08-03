@@ -27,24 +27,21 @@ public class MisFeignTestApplication {
         UUID userId = UUID.fromString("31c2cd49-939a-4227-ae8e-c95b0a4456b6");
 
         AppealToReportServiceDTO dto0 = feignServiceApp.getMedicalFeignClient().getAppealToReport(patientId, appealId, userId);
-//        System.out.println(dto0);
         System.out.println("HASH----");
         System.out.println(dto0.hashCode());
 
         AppealToReportServiceDTO dto1 = feignServiceApp.getMedicalFeignClient().getAppealToReport(patientId, appealId, userId);
+        System.out.println("EQUALS----");
+        System.out.println(dto1.equals(dto0));
 //        System.out.println(dto1);
-        System.out.println("HASH----");
-        System.out.println(dto1.hashCode());
 
-        AppealToReportServiceDTO dto2 = feignServiceApp.getMedicalFeignClient().getAppealToReport(patientId, appealId, userId);
-//        System.out.println(dto2);
-        System.out.println("HASH----");
-        System.out.println(dto2.hashCode());
-
-        AppealToReportServiceDTO dto3 = feignServiceApp.getMedicalFeignClient().getAppealToReport(patientId, appealId, userId);
-//        System.out.println(dto3);
-        System.out.println("HASH----");
-        System.out.println(dto3.hashCode());
+//        AppealToReportServiceDTO dto2 = feignServiceApp.getMedicalFeignClient().getAppealToReport(patientId, appealId, userId);
+//        System.out.println("HASH----");
+//        System.out.println(dto2.hashCode());
+//
+//        AppealToReportServiceDTO dto3 = feignServiceApp.getMedicalFeignClient().getAppealToReport(patientId, appealId, userId);
+//        System.out.println("HASH----");
+//        System.out.println(dto3.hashCode());
 
     }
 }
